@@ -1,6 +1,8 @@
 package io.com;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UsingFiles {
 
@@ -55,7 +57,46 @@ public class UsingFiles {
 
         }
 
+        try {
+            FileReader readme = new FileReader(newFile);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+        File dir = new File("src/");
+        File [] files = dir.listFiles();
+        for (File f : files){
+
+            System.out.println(f.getName());
+        }
+
+        List<String> myStrings = new ArrayList<String>();
+
+        myStrings.add("Hello");
+        myStrings.add("World");
+        myStrings.add("We");
+        myStrings.add("are");
+        myStrings.add("Saint");
+        myStrings.add("Helens");
+        myStrings.add("RLFC");
+
+        for (int i = 0; 1 < myStrings.size(); i++){
+
+            System.out.println(myStrings.get(i) + "");
+        }
+
+        for (String string : myStrings) {
+
+            System.out.println(string + "");
+        }
+
     }
+
+
+
+
+
 
 
 }
